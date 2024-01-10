@@ -1,0 +1,457 @@
+/* ### Primary
+
+- Dark Blue: hsl(233, 26%, 24%)
+- Lime Green: hsl(136, 65%, 51%)
+- Bright Cyan: hsl(192, 70%, 51%)
+
+### Neutral
+
+- Grayish Blue: hsl(233, 8%, 62%)
+- Light Grayish Blue: hsl(220, 16%, 96%)
+- Very Light Gray: hsl(0, 0%, 98%)
+- White: hsl(0, 0%, 100%)
+ */
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: hsl(0, 0%, 98%);
+    font-family: 'Public Sans', sans-serif;
+}
+
+.header{
+  background:white;
+  padding: 30px;
+}
+
+.nav-bar{
+    position: fixed;
+    margin:5% 0 0 0; 
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    height: 50%;
+    display:none;
+    background: white;
+    padding:30px ;
+    border-radius: 10px;
+    z-index: 1111111;
+    box-shadow: 2px 2px 8px hsl(233, 8%, 62%);
+}
+
+
+.nav-bar ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 30px;  
+}
+
+.nav-bar ul li{
+    list-style-type: none;
+    padding-top: 25px;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    color: hsl(233, 8%, 62%);
+    display: block;
+    transition: all .3s linear;
+    font-weight: 400;
+}
+
+.nav-bar ul li a:hover{
+    cursor: pointer;
+    color: hsl(233, 26%, 24%);
+}
+
+ 
+#check{
+    display: none;
+}
+
+label #btn,label #cancel{
+    position: absolute;
+    top: 30px;
+    left: 83%;
+}
+
+label #cancel{
+    display: none;
+}
+
+#check:checked ~ label #btn{
+    display: none;
+}
+
+#check:checked ~ label #cancel{
+    display: block;
+}
+
+#check:checked ~ .nav-bar{
+    display: block;
+}
+
+.button{
+    padding: 10px 20px;
+    color: white;
+    background: linear-gradient(to right,hsl(136, 65%, 51%),hsl(192, 70%, 51%) );
+    border-radius: 15px;
+    border: none;
+    display: none;
+    transition: all .3s linear;
+}
+
+.button:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
+.body{
+    margin: 30px;
+}
+
+/* **************NEXT GENERATION*************** */
+.next-img{
+    margin: -30px 0 0 -30px;
+    width: calc(100% + 60px);
+    background: url("./easybank-landing-page-master/images/bg-intro-mobile.svg") center/cover ;
+ }
+
+ .next-img .img-2{
+    width: 100%;
+ }
+
+ .next-item{
+    text-align: center;
+ }
+
+ .next-item h1{
+    color: hsl(233, 26%, 24%);
+    font-weight: 400;
+ }
+
+ .next-item p{
+    line-height: 25px;
+    margin: 20px 0;
+    color: hsl(233, 8%, 62%);
+ }
+
+ .next-item button{
+    padding: 10px 20px;
+    color: white;
+    background: linear-gradient(to right,hsl(136, 65%, 51%),hsl(192, 70%, 51%) );
+    border-radius: 15px;
+    border: none;
+    transition: all .3s linear;
+ }
+
+ .next-item button:hover{
+    opacity: 0.6;
+    cursor: pointer;
+ }
+
+ /* **********************WHY CHOOSE*********** */
+ .why{
+    width: calc(100% + 60px);
+    margin: 100px 0 0  -30px;
+    background: hsl(220, 16%, 96%);
+    padding: 30px;
+ }
+ .title,.title-2{
+    text-align: center;
+ }
+
+ .title h1,.title-2 h1{
+    font-weight: 400;
+ }
+
+ .title p{
+    line-height: 25px;
+    margin: 20px 0 40px;
+    color: hsl(233, 8%, 62%);
+ }
+
+ .reasons{
+    text-align: center;
+ }
+
+.reasons h2{
+    margin-top: 20px;
+    color: hsl(233, 26%, 24%);
+    font-weight: 400;
+}
+ .reasons p{
+    line-height: 25px;
+    margin: 20px 0 40px;
+    color: hsl(233, 8%, 62%);
+ }
+
+ /* *******************LATEST ARTICLES************ */
+ .latest{
+    background: hsl(0, 0%, 98%);
+    padding: 30px;
+    width: calc(100% + 60px);
+    margin: 50px 0 0  -30px;
+ }
+
+ .latest-items{
+    margin-top: 30px;
+ }
+
+ .items{
+    background: white;
+    margin-bottom: 40px;
+    
+ }
+
+ .items img{
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+ }
+
+ .content{
+    padding: 20px;
+ }
+
+ .content p:nth-child(1){
+    color: hsl(233, 8%, 62%);
+    font-size: 14px;
+ }
+
+ .content h3{
+    margin: 20px 0;
+    color: hsl(233, 26%, 24%);
+    transition: all .3s linear;
+    font-weight: 400;
+ }
+
+ .content h3:hover{
+    color: hsl(136, 65%, 51%);
+    cursor: pointer;
+ }
+
+ .content p{
+    line-height: 24px;
+    color: hsl(233, 8%, 62%);
+ }
+ 
+
+/* **************FOOTER************** */
+.footer{
+    background: hsl(233, 26%, 24%);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+} 
+
+.logo-2 img{
+    filter:invert(1) saturate(1) sepia(1) brightness(5) hue-rotate(0deg) ;
+    margin-bottom: 15px;
+}
+
+.icons img{
+    margin-right: 10px;
+    margin-bottom: 25px;
+}
+
+.link-1 ul li,.link-2 ul li{
+    list-style-type: none;
+    padding-top: 15px;
+}
+
+.link-1 ul li a,.link-2 ul li a{
+    text-decoration: none;
+    color: white;
+    transition: all .3s linear;
+}
+
+.link-1 ul li a:hover,.link-2 ul li a:hover{
+   color: hsl(136, 65%, 51%);
+   cursor: pointer;
+}
+
+.footer-3{
+    margin-top: 30px;
+}
+
+.footer-3 p{
+    color: hsl(233, 8%, 62%);
+    margin-top: 20px;
+}
+
+.footer-3 button{
+    padding: 10px 20px;
+    color: white;
+    background: linear-gradient(to right,hsl(136, 65%, 51%),hsl(192, 70%, 51%) );
+    border-radius: 15px;
+    border: none;
+    transition: all .3s linear;
+}
+
+.footer-3 button:hover{
+    opacity: .6;
+    cursor: pointer;
+}
+
+@media screen and (min-width:768px){
+    
+    .header{
+        padding: 30px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-bar{
+        position: initial;
+        margin:initial; 
+        left: initial;
+        width: initial;
+        display: flex;
+        background:none;
+        padding:initial;
+        border-radius: none;
+        z-index: 1111111111111;
+        box-shadow: none;
+        transform: none;
+    }
+
+    .nav-bar ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: initial;
+    }
+
+    
+    .nav-bar ul li{
+        list-style-type: none;
+        padding-top: initial;
+        padding-left: 25px;
+    }
+    
+    label #btn,label #cancel{
+        display: none;
+    }
+    
+    .button{
+        display: block;
+    }
+    .body{
+        margin: 100px;
+    }
+
+     .next{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        height: 80vh;
+     }
+
+     .next-img{
+        /* width: 50%; */
+        transform: translateX(15%);
+        margin: -100px 0 0 -100px;
+        width: calc(50% + 100px);
+        background: url("./easybank-landing-page-master/images/bg-intro-desktop.svg")  ;
+        background-size: cover;
+        /* background-position: bottom 20vh; */
+
+        
+     }
+
+     .next-img .img-2{
+        transform: scale(0.8);
+        width: 100%;   
+     }
+
+     .next-item{
+        margin-top: initial;
+        text-align: left;
+        width: 50%;
+     }
+
+     .next-item p{
+        width: 50%;
+     }
+
+    .title{
+        text-align: left;
+    }
+
+    .title p{
+        width:50%;
+    }
+
+    .reasons{
+        text-align: left;
+    }
+
+    .why{
+        width: calc(100% + 200px);
+        margin: -80px 0 0 -100px;
+        background: hsl(220, 16%, 96%);
+        padding: 100px;
+     }
+
+    .why-items{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: 20px;
+    }
+
+    .title-2{
+        text-align: left;
+        font-weight: 400;
+    }
+
+    .latest{
+        padding: 100px 100px 0 100px;
+        width: calc(100% + 200px);
+        margin: 20px 0 0  -100px;
+    }
+    
+    .latest-items{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 20px;
+    }
+    .footer{
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+        align-items: center;
+        padding:50px 100px;
+    }
+
+    .footer-2{
+        display: flex;
+    }
+
+    .link-1{
+        margin-right: 150px;
+    }
+
+    .footer-3{
+        text-align: right;
+        margin-top: initial;
+    }
+}
+
+ 
+
